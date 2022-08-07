@@ -7,7 +7,8 @@ import styles from './Header.module.scss';
 import { images } from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { useState } from 'react';
-import AccountItem from '../../../AccountItem';
+import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -46,7 +47,9 @@ const Header = () => {
                     </div>
                 </Tippy>
 
-                <div className={cx('actions')}>Login</div>
+                <div className={cx('actions')}>
+                    <Button primary>Login</Button>
+                </div>
             </div>
         </header>
     );
